@@ -75,7 +75,7 @@ def mnistData():
     trainY = keras.utils.to_categorical(trainY, num_classes)
     testY = keras.utils.to_categorical(testY, num_classes)
 
-    return trainX, trainY, testX, testY
+    return trainX, trainY, testX, testY, input_shape
 
 
 
@@ -84,12 +84,11 @@ if __name__=='__main__':
 
     # initialize parameters
     img_x, img_y = 28, 28 # for mnist we have 28x28 images
-    input_shape = (img_x, img_y)
     batch_size=10
     epochs=5
     num_classes = 10
 
-    trainX,trainY,testX,testY = mnistData() # may use other data as well
+    trainX,trainY,testX,testY, input_shape = mnistData() # may use other data as well
 
     plt.imshow(trainX[1,:,:])
     plt.show()
@@ -98,9 +97,9 @@ if __name__=='__main__':
     CNNModel = arch1(input_shape, num_classes)
 
     # train the model
-    trained_model, = CNNModel.fit(trainX, trainY, batch_size, epochs)
+    CNNModel.fit(trainX, trainY, batch_size, epochs)
 
     # evaluate the model performance
-    evalModel(trained_model, testX, testY, batch_size)
+    evalModel(CNNModel, testX, testY, batch_size)
 
 
