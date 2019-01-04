@@ -90,14 +90,19 @@ if __name__=='__main__':
 
     trainX,trainY,testX,testY, input_shape = mnistData() # may use other data as well
 
-    plt.imshow(trainX[1,:,:])
-    plt.show()
+    smallIdx = round(trainX.shape[0]*0.01)
+    smallTrainX = trainX[:smallIdx,:,:,:]
+    smallTrainY = trainY[:smallIdx]
+
+    #plt.imshow(trainX[1,:,:,:])
+    #plt.show()
 
     # Define the model with a given architecture
     CNNModel = arch1(input_shape, num_classes)
+    print(CNNModel.summary())
 
     # train the model
-    CNNModel.fit(trainX, trainY, batch_size, epochs)
+    CNNModel.fit(smallTrainX, smallTrainY, batch_size, epochs)
 
     # evaluate the model performance
     evalModel(CNNModel, testX, testY, batch_size)
