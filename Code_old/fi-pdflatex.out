@@ -1,0 +1,11 @@
+\BOOKMARK [2][]{Outline0.1}{Introduction}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Seeking\040invariant\040or\040stable\040representations}{}% 2
+\BOOKMARK [3][]{Outline0.2.1.5}{Notations}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.2.6}{Different\040types\040of\040variability}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.3.11}{The\040wavelet\040transform}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.4.17}{Introducing\040non-linearity}{Outline0.2}% 6
+\BOOKMARK [2][]{Outline0.3}{Toward\040a\040convolution\040network}{}% 7
+\BOOKMARK [3][]{Outline0.3.1.20}{Definition}{Outline0.3}% 8
+\BOOKMARK [3][]{Outline0.3.2.21}{The\040wavelet\040scattering\040network}{Outline0.3}% 9
+\BOOKMARK [3][]{Outline0.3.3.28}{Building\040a\040wavelet\040scattering\040network}{Outline0.3}% 10
+\BOOKMARK [3][]{Outline0.3.4.31}{Scattering\040properties}{Outline0.3}% 11

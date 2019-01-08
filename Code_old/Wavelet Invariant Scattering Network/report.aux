@@ -1,0 +1,39 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Algorithm}{1}{section.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Fast Scattering Computations}{1}{subsection.1.1}}
+\newlabel{JA}{{1.1}{3}{Fast Scattering Computations}{ex.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces In this figure are shown the original image $x$ (at the top) with $N = 2^8 \times 2^8 = 65536$ pixels and various windowed scattering coefficients of order $0$ for different choices of the maximal space scale $2^J$. In the left column, we decided not to perform oversampling (i.e. $\alpha =1$), while we did it in the right one ($\alpha = \frac  {1}{2}$).}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$J=1$, we obtain $16384$ coefficients.}}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {$J=1$, we obtain $65536$ coefficients.}}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {$J=4$, we obtain $256$ coefficients.}}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {$J=4$, we obtain $1024$ coefficients.}}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {$J=8$, we obtain $1$ coefficient.}}}{3}{figure.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {$J=8$, we obtain $4$ coefficients.}}}{3}{figure.1}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Fast Scattering Transform}}{4}{algorithm.1}}
+\newlabel{FST}{{1}{4}{Fast Scattering Computations}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Understanding of the algorithm}{4}{subsection.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces In the Figure are shown the scattering coefficients of the same image depicted in Figure (\ref  {JA}) with respect to a network having $\overline  {m} = 2$ layers, maximal space scale $J=3$ and $K=2$ positive rotations. In the picture on the left are shown the coefficient of the layer $m=0$, that is the convolution between the original image $x$ and the lower-pass filter $\Phi _{2^3}$. In the second picture are displayed the coefficient of the first layer ordered in increasing order with respect to $j_1$ (top to bottom) and $r_1$ (left to right). In the third one appear the coefficients of the last layer $m=2$ sorted in increasing order over the couple $(j_1, j_2)$ (top to bottom) and $(r_1, r_1)$ (left to right). We can notice that only the coefficients over frequency decreasing paths are computed and we have $ {\DOTSB \sum@ \slimits@ _{m=0}^{2} 2^m {{3}\atopwithdelims (){m}}} = 19$ of them.}}{6}{figure.2}}
+\newlabel{fig:j3l2m2o1}{{2}{6}{In the Figure are shown the scattering coefficients of the same image depicted in Figure (\ref {JA}) with respect to a network having $\overline {m} = 2$ layers, maximal space scale $J=3$ and $K=2$ positive rotations. In the picture on the left are shown the coefficient of the layer $m=0$, that is the convolution between the original image $x$ and the lower-pass filter $\Phi _{2^3}$. In the second picture are displayed the coefficient of the first layer ordered in increasing order with respect to $j_1$ (top to bottom) and $r_1$ (left to right). In the third one appear the coefficients of the last layer $m=2$ sorted in increasing order over the couple $(j_1, j_2)$ (top to bottom) and $(r_1, r_1)$ (left to right). We can notice that only the coefficients over frequency decreasing paths are computed and we have $ {\sum _{m=0}^{2} 2^m {{3}\choose {m}}} = 19$ of them}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Convolutional Neural Networks}{6}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Theory}{6}{subsection.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Our implementation}{7}{subsection.2.2}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Calculation of moments}{7}{lstlisting.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Results}{8}{subsection.2.3}}

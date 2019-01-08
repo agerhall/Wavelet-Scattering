@@ -1,0 +1,12 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Seeking invariant or stable representations}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Notations}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Different types of variability}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{The wavelet transform}{11}{0}{2}
+\beamer@subsectionintoc {2}{4}{Introducing non-linearity}{17}{0}{2}
+\beamer@sectionintoc {3}{Toward a convolution network}{19}{0}{3}
+\beamer@subsectionintoc {3}{1}{Definition}{20}{0}{3}
+\beamer@subsectionintoc {3}{2}{The wavelet scattering network}{21}{0}{3}
+\beamer@subsectionintoc {3}{3}{Building a wavelet scattering network}{28}{0}{3}
+\beamer@subsectionintoc {3}{4}{Scattering properties}{31}{0}{3}

@@ -11,11 +11,11 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-def arch1(input_shape,num_classes):
+def arch1(input_shape, num_classes, nb_out_chan=16, kernel_size=(5, 5)):
 
     # Network structure
     model = Sequential()
-    model.add(Conv2D(16, kernel_size=(5, 5), strides=(1, 1), padding='same',
+    model.add(Conv2D(nb_out_chan, kernel_size=kernel_size, strides=(1, 1), padding='same',
                      activation='relu', input_shape=input_shape))
     model.add(BatchNormalization(axis=1))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -32,8 +32,8 @@ def arch1(input_shape,num_classes):
     return model
 
 
-def trainCNN(X, Y, input_shape, num_classes, batch_size,epochs):
-    CNNModel = arch1(input_shape, num_classes)
+def trainCNN(X, Y, input_shape, num_classes, batch_size,epochs, nb_out_chan=16, kernel_size=(5, 5)):
+    CNNModel = arch1(input_shape, num_classes, nb_out_chan, kernel_size)
 
     testX = X[:, :, 1:round(0.2*len(X[1, 1, :]))]
     valX = X[:, :, round(0.2*len(X[1, 1, :])):round(0.3*len(X[1, 1, :]))]
@@ -57,17 +57,17 @@ def evalModel(model, testX, testY, batch_size):
     print(str(model.metrics_names[0]) + ': ' + str(score[0]))
     print(str(model.metrics_names[1]) + ': ' + str(score[1]))
 
-def mnistData():
+def mnistData(img_x, img_y, num_classes):
     (trainX, trainY), (testX, testY) = mnist.load_data()
 
     if K.image_data_format() == 'channels_first':
-        trainX = trainX.reshape(trainX.shape[0], 1, img_y, img_y) # Isn't it img_x, img_y? ###############################
-        testX = testX.reshape(testX.shape[0], 1, img_y, img_y)
-        input_shape = (1, img_y, img_y)
+        trainX = trainX.reshape(trainX.shape[0], 1, img_x, img_y) # Isn't it img_x, img_y? ###############################
+        testX = testX.reshape(testX.shape[0], 1, img_x, img_y)
+        input_shape = (1, img_x, img_y)
     else:
-        trainX = trainX.reshape(trainX.shape[0], img_y, img_y, 1)
-        testX = testX.reshape(testX.shape[0], img_y, img_y, 1)
-        input_shape = (img_y, img_y, 1)
+        trainX = trainX.reshape(trainX.shape[0], img_x, img_y, 1)
+        testX = testX.reshape(testX.shape[0], img_x, img_y, 1)
+        input_shape = (img_x, img_y, 1)
 
     # convert class vectors to binary class matrices
     trainY = keras.utils.to_categorical(trainY, num_classes)
@@ -86,7 +86,7 @@ if __name__=='__main__':
     epochs = 5
     num_classes = 10
 
-    trainX,trainY,testX,testY, input_shape = mnistData() # may use other data as well
+    trainX,trainY,testX,testY, input_shape = mnistData(img_x, img_y, num_classes) # may use other data as well
 
     smallIdx = int(trainX.shape[0]*0.01)
     smallTrainX = trainX[:smallIdx,:,:,:]
